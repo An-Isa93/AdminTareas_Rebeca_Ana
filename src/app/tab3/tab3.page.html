@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+       Administrador de Tareas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngIf="user">
+    <div class="content">
+      <h2>Welcome!</h2>
+      <div class="imagen">
+        <img [src]="imagen" *ngIf="imagen" width="200px">
+      </div>
+
+      <div class="actualizarFoto">
+        <input type="file" (change)="subirImagen($event)">
+      </div>
+
+      <p>Email: {{ user.email }}</p>
+
+      <ion-button (click)="logout()" expand="full" shape="round">Cerrar Sesion</ion-button>
+    </div>
+
+  </ng-container>
+
+</ion-content>

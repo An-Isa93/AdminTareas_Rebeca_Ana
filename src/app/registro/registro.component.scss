@@ -1,0 +1,56 @@
+form {
+    margin: 2%;
+}
+
+.container {
+    margin: 2% auto;
+    border: 2px solid #d0d8d7;
+    align-items: center;
+    justify-content: center;
+    height: auto; 
+    max-width: 600px; 
+    width: 90%;
+    background: rgb(255, 253, 253);
+    border-radius: 20px;
+
+}
+
+ion-input {
+    margin-bottom: 3%;
+}
+
+ion-button {
+    --background: #212b29;
+    --color: white;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+ion-icon {
+    margin-right: 2%;
+}
+
+.btn-login {
+    display: block;
+    height: 45px;
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.logo {
+    width: 40%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column; 
+
+}
+
+.titulo {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+

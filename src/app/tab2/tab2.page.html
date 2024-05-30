@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Agregar Tarea
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="forms">
+    <form [formGroup]="formAgregar" (submit)="onSubmit()">
+      <!-- Nombre de la tarea -->
+      <ion-input label="Nombre de la tarea" formControlName="Nombre" label-placement="floating" fill="outline" name="nombre" ></ion-input>
+      <br />
+      <!-- Descripcion -->
+      <ion-label>Descripción</ion-label>
+      <ion-textarea fill="outline" rows="3"  formControlName="Descripcion" name="descripcion"></ion-textarea>
+      <br />
+      <!-- Fecha de entrega -->
+      <ion-label position="floating">Fecha de entrega</ion-label>
+      <div class="fecha">
+        <ion-datetime name="fecha" class="calendario"  formControlName="Fecha"></ion-datetime>
+      </div>
+      <br />
+      <!-- Materia -->
+      <ion-input label="Materia" label-placement="floating" fill="outline"  formControlName="Materia" name="materia" ></ion-input>
+      <br />
+      <!-- Boton de agregar -->
+      <div class="boton">
+        <ion-button  class="botonAgregar" type="submit">Agregar Tarea</ion-button>
+        <ion-button (click)="tomarFoto()">Agregar Foto</ion-button>
+      </div>
+    </form>
+  </div>
+
+</ion-content>

@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Detalles de la tarea</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="medium" (click)="cerrar()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="tarea" class="tarjeta">
+    
+    <div class="encabezado">
+      <div class="icon">
+        <ion-icon name="reader-outline"></ion-icon>
+      </div>
+      <div class="titulo">
+        <ion-card-title>{{tarea.Nombre}}</ion-card-title>
+      </div>
+    </div>
+    
+    <div class="fecha">
+      <p><strong><span style="color: blue;">Fecha:</span></strong> {{tarea.Fecha | date: 'EEEE dd-MM-yy'}}</p>
+    </div>
+
+    <div class="materia">
+      <p><strong><span style="color: blue;">Materia:</span></strong> {{tarea.Materia}}</p>
+    </div>
+
+    <div>
+      <p><strong><span style="color: blue;">Descripción de la tarea:</span></strong> {{ tarea.Descripcion }}</p>
+    </div>
+    <div *ngIf="tarea.webViewPath">
+      <img [src]="tarea.webViewPath" alt="Foto de la tarea">
+    </div>
+
+
+  </ion-card>
+
+</ion-content>
+

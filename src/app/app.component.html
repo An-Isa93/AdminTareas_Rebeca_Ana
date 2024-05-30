@@ -1,0 +1,10 @@
+<ion-app>
+    <ng-container *ngIf="isLoggedIn(); else showLogin">
+      <ion-router-outlet></ion-router-outlet>
+    </ng-container>
+    <ng-template #showLogin>
+      <app-login></app-login>
+      <ion-router-outlet></ion-router-outlet>
+    </ng-template>
+  </ion-app>
+  
